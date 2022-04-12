@@ -6,6 +6,6 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void out() {
-        System.out.println("123");
+        System.out.println("123456");
     }
 }
