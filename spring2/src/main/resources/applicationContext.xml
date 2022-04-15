@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="UserDao" class="com.ho.dao.impl.UserDaoImpl"></bean>
-</beans>
+
+
+<!--    这是一种注入方式-->
+    <!--<bean id="UserService" class="com.ho.service.impl.UserServiceImpl">
+        <property name="userDao" ref="UserDao"></property>
+    </bean>-->
+<!--    这个是另一种用p的注入方式，但是需要引入第四行的那个xmlns:p-->
+<!--    <bean id="UserService" class="com.ho.service.impl.UserServiceImpl" p:userDao-ref="UserDao"></bean>-->
+
+<!--构造-->
+    <bean id="UserService" class="com.ho.service.impl.UserServiceImpl">
+       <constructor-arg name="userDao" ref="UserDao"></constructor-arg>
+    </bean>
+    </beans>
