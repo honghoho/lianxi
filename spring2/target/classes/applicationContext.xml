@@ -4,7 +4,8 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="UserDao" class="com.ho.dao.impl.UserDaoImpl"></bean>
+<!--最初始的配置方式-->
+<!--    <bean id="UserDao" class="com.ho.dao.impl.UserDaoImpl"></bean>-->
 
 
 <!--    这是一种注入方式-->
@@ -14,8 +15,14 @@
 <!--    这个是另一种用p的注入方式，但是需要引入第四行的那个xmlns:p-->
 <!--    <bean id="UserService" class="com.ho.service.impl.UserServiceImpl" p:userDao-ref="UserDao"></bean>-->
 
-<!--构造-->
+<!--构造函数用的就是这种注入方式,在service中用的-->
     <bean id="UserService" class="com.ho.service.impl.UserServiceImpl">
        <constructor-arg name="userDao" ref="UserDao"></constructor-arg>
     </bean>
-</beans>
+
+    <bean id="UserDao" class="com.ho.dao.impl.UserDaoImpl">
+        <property name="username" value="haha"></property>
+        <property name="age" value="20"></property>
+    </bean>
+
+    </beans>

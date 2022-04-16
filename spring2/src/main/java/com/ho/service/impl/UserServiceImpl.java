@@ -7,7 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UserServiceImpl implements UserService {
     private UserDao userDao;
-
+//  构造函数用的就是这种方式
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }
@@ -18,8 +18,6 @@ public class UserServiceImpl implements UserService {
 /*    public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
     }*/
-
-
 
 
     @Override
