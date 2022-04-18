@@ -11,7 +11,7 @@ public class DataSourceTest {
     //测试手动创建c3p0数据源
     public void test1() throws Exception {
         ComboPooledDataSource dataSource =new ComboPooledDataSource();
-        dataSource.setDriverClass("com.mysql.jdbc.Driver");
+        dataSource.setDriverClass("com.mysqljdbc.Driver");
         dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/user");
         dataSource.setUser("root");
         dataSource.setPassword("123456");
