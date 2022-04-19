@@ -8,7 +8,7 @@ import java.sql.Connection;
 
 public class DataSourceTest {
     @Test
-    //测试手动创建c3p0数据源
+    //测试手动创建c3p0数据源的
     public void test1() throws Exception {
         ComboPooledDataSource dataSource =new ComboPooledDataSource();
         dataSource.setDriverClass("com.mysqljdbc.Driver");
