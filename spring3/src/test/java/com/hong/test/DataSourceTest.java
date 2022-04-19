@@ -18,7 +18,7 @@ public class DataSourceTest {
     public void test1() throws Exception {
         ComboPooledDataSource dataSource =new ComboPooledDataSource();
         dataSource.setDriverClass("com.mysql.jdbc.Driver");
-        dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/spring?serverTimezone=UTC");
+        dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/meeting?serverTimezone=UTC");
         dataSource.setUser("root");
         dataSource.setPassword("123456");
         Connection connection = dataSource.getConnection();
@@ -32,7 +32,7 @@ public class DataSourceTest {
     public void test2() throws Exception{
         DruidDataSource dataSource =new DruidDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/spring?serverTimezone=UTC");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/meeting?serverTimezone=UTC");
         dataSource.setUsername("root");
         dataSource.setPassword("123456");
         DruidPooledConnection connection =dataSource.getConnection();
