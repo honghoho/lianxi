@@ -114,6 +114,14 @@
     <servlet-name>DispatcherServlet</servlet-name>
     <url-pattern>/*</url-pattern>
   </servlet-mapping>
-
+  
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.hong.web.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/userServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
         
