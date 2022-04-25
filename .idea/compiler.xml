@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springweb" />
         <module name="spring3" />
         <module name="spring2" />
       </profile>
@@ -13,6 +14,7 @@
     <bytecodeTargetLevel>
       <module name="spring2" target="8" />
       <module name="spring3" target="8" />
+      <module name="springweb" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
